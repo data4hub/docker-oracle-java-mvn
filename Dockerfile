@@ -1,4 +1,4 @@
-FROM isuper/java-oracle
+FROM isuper/java-oracle 
 
 ENV MAVEN_VERSION 3.3.3
 
