@@ -31,6 +31,10 @@ RUN \
   chown uucp:143 $JAVADOC_PATH && \
   update-alternatives --install "/usr/bin/javadoc" "javadoc" "${JAVADOC_PATH}" 1
 
+# Install docker
+RUN /bin/bash -c "apt-get install apt-transport-https -y --force-yes && \
+  bash <(curl -s https://gist.githubusercontent.com/franciscocpg/05eea6945124df518c40/raw/)"
+
 ENV MAVEN_HOME /usr/share/maven
 
 CMD ["bash"]
